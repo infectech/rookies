@@ -44,7 +44,7 @@ const productNames: Record<number, string> = {
 };
 
 const outOfStockMap: Record<string, import("@/types").Size[]> = {
-  RR04: ["M", "L", "XL", "XXL"], RR02: ["L" , "XL"], RR05: ["L"]
+  RR04: ["M", "L", "XL", "XXL"], RR02: ["M", "L" , "XXL" , "XL"], RR05: ["L"]
 };
 
 const productsInCodeOrder: Product[] = productPhotoNumbers.reduce<Product[]>(
