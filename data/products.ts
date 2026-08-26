@@ -47,7 +47,7 @@ const outOfStockMap: Record<string, import("@/types").Size[]> = {
   RR04: ["M", "L", "XL", "XXL"], RR02: ["L" , "XL"], RR05: ["L"]
 };
 
-export const products: Product[] = productPhotoNumbers.reduce<Product[]>(
+const productsInCodeOrder: Product[] = productPhotoNumbers.reduce<Product[]>(
   (acc, photoNumber, index) => {
     const groupIndex = Math.floor(index / 3);
     if (index % 3 === 0) {
@@ -73,6 +73,8 @@ export const products: Product[] = productPhotoNumbers.reduce<Product[]>(
   },
   []
 );
+
+export const products: Product[] = [...productsInCodeOrder].reverse();
 
 export function getProductByCode(code: string): Product | undefined {
   return products.find((p) => p.code === code);
