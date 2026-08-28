@@ -25,6 +25,9 @@ export function ProductCard({ product, onSelect, index = 0 }: ProductCardProps) 
     (s) => !product.outOfStockSizes?.includes(s)
   );
   const [size, setSize] = useState<Size>(() => availableSizes[0] ?? "M");
+  const isStockout =
+    availableSizes.length === 0 ||
+    (product.outOfStockSizes?.includes(size) ?? false);
   const addItem = useCart((s) => s.addItem);
 
   const handleAddToCart = () => {
@@ -106,10 +109,16 @@ export function ProductCard({ product, onSelect, index = 0 }: ProductCardProps) 
 
         <Button
           onClick={handleAddToCart}
-          className="mt-2 h-9 w-full rounded-full bg-black text-xs text-white transition-colors hover:bg-gold hover:text-black sm:mt-3 sm:h-11 sm:text-sm"
+          disabled={isStockout}
+          className={cn(
+            "mt-2 h-9 w-full rounded-full text-xs text-white transition-colors disabled:opacity-100 sm:mt-3 sm:h-11 sm:text-sm",
+            isStockout
+              ? "bg-burgundy hover:bg-burgundy"
+              : "bg-black hover:bg-gold hover:text-black"
+          )}
         >
           <ShoppingCart className="size-4" />
-          Add to Cart
+          {isStockout ? "Stockout" : "Add to Cart"}
         </Button>
         <Button
           type="button"

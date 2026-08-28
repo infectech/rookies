@@ -57,8 +57,16 @@ export default function ProductModal({
     onOpenChange(nextOpen);
   };
 
+  const sizes: Size[] = ["M", "L", "XL", "XXL"];
+  const allSizesOutOfStock = sizes.every(
+    (s) => product.outOfStockSizes?.includes(s)
+  );
+  const isStockout =
+    allSizesOutOfStock ||
+    (size !== null && (product.outOfStockSizes?.includes(size) ?? false));
+
   const handleAddToCart = () => {
-    if (!size) return;
+    if (!size || product.outOfStockSizes?.includes(size)) return;
     const item = {
       productCode: product.code,
       productName: product.name,
@@ -177,14 +185,20 @@ export default function ProductModal({
             <Button
               className={cn(
                 "mt-2 h-12 w-full rounded-full text-base",
-                size
+                isStockout
+                  ? "bg-burgundy text-white disabled:opacity-100"
+                  : size
                   ? "bg-black text-white hover:bg-gold hover:text-black"
                   : "bg-muted text-muted-foreground"
               )}
-              disabled={!size}
+              disabled={!size || isStockout}
               onClick={handleAddToCart}
             >
-              {size ? "Add to Cart" : "Select a size"}
+              {isStockout
+                ? "Stockout"
+                : size
+                ? "Add to Cart"
+                : "Select a size"}
             </Button>
           </div>
         </div>
