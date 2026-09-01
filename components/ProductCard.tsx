@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { ShoppingCart } from "lucide-react";
 import { Product, Size } from "@/types";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "@/components/ProductSlider";
 import PricingDisplay from "@/components/PricingDisplay";
@@ -66,10 +67,15 @@ export function ProductCard({ product, onSelect, index = 0 }: ProductCardProps) 
             onSelect(product);
           }
         }}
-        className="block cursor-pointer text-left"
+        className="relative block cursor-pointer text-left"
         aria-label={`View ${product.name}`}
       >
         <ProductSlider images={product.images} alt={product.name} className="rounded-none" />
+        {product.isNewArrival && (
+          <Badge className="absolute right-2 top-2 z-10 bg-gold text-black shadow-sm">
+            New Arrival
+          </Badge>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-1 p-2.5 sm:p-4">

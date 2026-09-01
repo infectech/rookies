@@ -8,6 +8,7 @@ export interface Product {
   price: number;
   images: string[];
   outOfStockSizes?: Size[];
+  isNewArrival?: boolean;
 }
 
 export interface CartItem {

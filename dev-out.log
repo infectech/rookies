@@ -1,0 +1,780 @@
+
+> revine@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.12 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.100:3000
+✓ Ready in 455ms
+Warning: Custom Cache-Control headers detected for the following routes:
+  - /_next/static/(.*)
+  - /_next/image(.*)
+
+Setting a custom Cache-Control header can break Next.js development behavior.
+- Experiments (use with caution):
+  · optimizePackageImports
+
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <section>
+                  <section id="products" className="mx-auto w-...">
+                    <div>
+                    <div className="grid grid-...">
+                      <ProductCard product={{id:12,code:"RR12", ...}} onSelect={function handleSelect} index={0}>
+                        <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                          <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={function onClick}
+                              onKeyDown={function onKeyDown}
++                             className="block cursor-pointer text-left"
+-                             className="relative block cursor-pointer text-left"
++                             aria-label="View Rugged Check"
+-                             aria-label="View Arrival Herringbone"
+                            >
+                              ...
+                                <div className="flex">
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 1"
+-                                       alt="Arrival Herringbone 1"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F22.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F22.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 2"
+-                                       alt="Arrival Herringbone 2"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F23.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F23.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 3"
+-                                       alt="Arrival Herringbone 3"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F24.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F24.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+-                             <span
+-                               data-slot="badge"
+-                               data-variant="default"
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                             >
+                            ...
+                      ...
+                  ...
+            ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3318:56)
+    at popHydrationState (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3403:13)
+    at completeWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6922:25)
+    at runWithFiberInDEV (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at completeUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9622:23)
+    at performUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9551:58)
+    at renderRootConcurrent (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9534:71)
+    at performWorkOnRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at div (<anonymous>)
+    at ProductCard (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:431:215)
+    at <unknown> (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:387)
+    at Array.map (<anonymous>)
+    at Home (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:163)
+    at ClientPageRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_1fcjjwo._.js:10573:50)
+[browser] Uncaught Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <section>
+                <section id="products" className="mx-auto w-...">
+                  <div>
+                  <div className="grid grid-...">
+                    <ProductCard product={{id:1008,code:"...", ...}} onSelect={function handleSelect} index={0}>
+                      <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                        <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <div role="button" tabIndex={0} onClick={function onClick} onKeyDown={function onKeyDown} ...>
+                            <ProductSlider>
+                            <Badge className="absolute l...">
+                              <span
+                                data-slot="badge"
+                                data-variant="default"
++                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+                                ref={null}
+                              >
++                               New Arrival
+                          <div className="flex flex-...">
+                            <h3>
+                            <p className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
++                             RRN08
+-                             RR20
+                            ...
+                    ...
+                ...
+          ...
+        ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3318:56)
+    at prepareToHydrateHostInstance (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3372:23)
+    at completeWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6922:60)
+    at runWithFiberInDEV (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at completeUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9622:23)
+    at performUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9551:58)
+    at renderRootConcurrent (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9534:71)
+    at performWorkOnRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at p (<anonymous>)
+    at ProductCard (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:478:223)
+    at <unknown> (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:387)
+    at Array.map (<anonymous>)
+    at Home (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:163)
+    at ClientPageRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_1fcjjwo._.js:10573:50)
+ GET /catalog/products 404 in 3.4s (next.js: 2.3s, application-code: 1136ms)
+ GET /settings/integrations 404 in 3.4s (next.js: 2.3s, application-code: 1075ms)
+ GET / 200 in 3.4s (next.js: 2.7s, application-code: 702ms)
+ GET / 200 in 3.5s (next.js: 2.8s, application-code: 678ms)
+ GET / 200 in 399ms (next.js: 9ms, application-code: 391ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <section>
+                  <section id="products" className="mx-auto w-...">
+                    <div>
+                    <div className="grid grid-...">
+                      <ProductCard product={{id:12,code:"RR12", ...}} onSelect={function handleSelect} index={0}>
+                        <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                          <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={function onClick}
+                              onKeyDown={function onKeyDown}
++                             className="block cursor-pointer text-left"
+-                             className="relative block cursor-pointer text-left"
++                             aria-label="View Rugged Check"
+-                             aria-label="View Arrival Herringbone"
+                            >
+                              ...
+                                <div className="flex">
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 1"
+-                                       alt="Arrival Herringbone 1"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F22.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F22.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 2"
+-                                       alt="Arrival Herringbone 2"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F23.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F23.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 3"
+-                                       alt="Arrival Herringbone 3"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F24.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F24.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+-                             <span
+-                               data-slot="badge"
+-                               data-variant="default"
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                             >
+                            ...
+                      ...
+                  ...
+            ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3318:56)
+    at popHydrationState (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3403:13)
+    at completeWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6922:25)
+    at runWithFiberInDEV (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at completeUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9622:23)
+    at performUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9551:58)
+    at renderRootConcurrent (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9534:71)
+    at performWorkOnRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at div (<anonymous>)
+    at ProductCard (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:431:215)
+    at <unknown> (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:387)
+    at Array.map (<anonymous>)
+    at Home (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:163)
+    at ClientPageRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_1fcjjwo._.js:10573:50)
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET / 200 in 120ms (next.js: 5ms, application-code: 115ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <section>
+                  <section id="products" className="mx-auto w-...">
+                    <div>
+                    <div className="grid grid-...">
+                      <ProductCard product={{id:12,code:"RR12", ...}} onSelect={function handleSelect} index={0}>
+                        <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                          <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={function onClick}
+                              onKeyDown={function onKeyDown}
++                             className="block cursor-pointer text-left"
+-                             className="relative block cursor-pointer text-left"
++                             aria-label="View Rugged Check"
+-                             aria-label="View Arrival Herringbone"
+                            >
+                              ...
+                                <div className="flex">
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 1"
+-                                       alt="Arrival Herringbone 1"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F22.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F22.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 2"
+-                                       alt="Arrival Herringbone 2"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F23.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F23.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 3"
+-                                       alt="Arrival Herringbone 3"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F24.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F24.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+-                             <span
+-                               data-slot="badge"
+-                               data-variant="default"
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                             >
+                            ...
+                      ...
+                  ...
+            ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3318:56)
+    at popHydrationState (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3403:13)
+    at completeWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6922:25)
+    at runWithFiberInDEV (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at completeUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9622:23)
+    at performUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9551:58)
+    at renderRootConcurrent (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9534:71)
+    at performWorkOnRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at div (<anonymous>)
+    at ProductCard (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:431:215)
+    at <unknown> (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:387)
+    at Array.map (<anonymous>)
+    at Home (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:163)
+    at ClientPageRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_1fcjjwo._.js:10573:50)
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET / 200 in 114ms (next.js: 5ms, application-code: 109ms)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <section>
+                  <section id="products" className="mx-auto w-...">
+                    <div>
+                    <div className="grid grid-...">
+                      <ProductCard product={{id:12,code:"RR12", ...}} onSelect={function handleSelect} index={0}>
+                        <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                          <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={function onClick}
+                              onKeyDown={function onKeyDown}
++                             className="block cursor-pointer text-left"
+-                             className="relative block cursor-pointer text-left"
++                             aria-label="View Rugged Check"
+-                             aria-label="View Arrival Herringbone"
+                            >
+                              ...
+                                <div className="flex">
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 1"
+-                                       alt="Arrival Herringbone 1"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F22.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F22.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 2"
+-                                       alt="Arrival Herringbone 2"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F23.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F23.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 3"
+-                                       alt="Arrival Herringbone 3"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F24.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F24.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+-                             <span
+-                               data-slot="badge"
+-                               data-variant="default"
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                             >
+                            ...
+                      ...
+                  ...
+            ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3318:56)
+    at popHydrationState (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3403:13)
+    at completeWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6922:25)
+    at runWithFiberInDEV (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at completeUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9622:23)
+    at performUnitOfWork (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9551:58)
+    at renderRootConcurrent (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9534:71)
+    at performWorkOnRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at div (<anonymous>)
+    at ProductCard (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:431:215)
+    at <unknown> (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:387)
+    at Array.map (<anonymous>)
+    at Home (file://E:/Code/rookies/.next/dev/static/chunks/_05cogrn._.js:1702:163)
+    at ClientPageRoot (file://E:/Code/rookies/.next/dev/static/chunks/node_modules_next_1fcjjwo._.js:10573:50)
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <section>
+                  <section id="products" className="mx-auto w-...">
+                    <div>
+                    <div className="grid grid-...">
+                      <ProductCard product={{id:12,code:"RR12", ...}} onSelect={function handleSelect} index={0}>
+                        <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true, ...}} ...>
+                          <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={function onClick}
+                              onKeyDown={function onKeyDown}
++                             className="block cursor-pointer text-left"
+-                             className="relative block cursor-pointer text-left"
++                             aria-label="View Rugged Check"
+-                             aria-label="View Arrival Herringbone"
+                            >
+                              ...
+                                <div className="flex">
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 1"
+-                                       alt="Arrival Herringbone 1"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F22.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2037.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F22.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 2"
+-                                       alt="Arrival Herringbone 2"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F23.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2038.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F23.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+                                  <div className="relative m...">
+                                    <div className="relative a...">
+                                      <img
++                                       alt="Rugged Check 3"
+-                                       alt="Arrival Herringbone 3"
+                                        fetchPriority={undefined}
+                                        loading="lazy"
+                                        width={undefined}
+                                        height={undefined}
+                                        decoding="async"
+                                        data-nimg="fill"
+                                        className="object-cover"
+                                        style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
++                                       srcSet={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=12..."}
+-                                       srcSet={"/_next/image?url=%2FNew%20Products%2F24.png&w=128&q=75 128w, /_next/..."}
++                                       src={"/_next/image?url=%2Fproducts%2Frookies%2005-08-26%20RR%2039.png&w=1536&..."}
+-                                       src={"/_next/image?url=%2FNew%20Products%2F24.png&w=1536&q=75"}
+                                        ref={function}
+                                        onLoad={function onLoad}
+                                        onError={function onError}
+                                      >
+-                             <span
+-                               data-slot="badge"
+-                               data-variant="default"
+-                               className={"group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center ga..."}
+-                             >
+                            ...
+                      ...
+                  ...
+            ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at ProductCard (components/ProductCard.tsx:60:7)
+    at <unknown> (app/page.tsx:56:13)
+    at Array.map (<anonymous>)
+    at Home (app/page.tsx:55:21)
+  58 |       className="flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-white"
+  59 |     >
+> 60 |       <div
+     |       ^
+  61 |         role="button"
+  62 |         tabIndex={0}
+  63 |         onClick={() => onSelect(product)}
+ GET / 200 in 109ms (next.js: 5ms, application-code: 103ms)
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET / 200 in 117ms (next.js: 6ms, application-code: 111ms)
+[browser] Image with src "/logo golden.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET / 200 in 102ms (next.js: 5ms, application-code: 97ms)
+[browser] Image with src "/logo white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+✓ Compiled in 74ms
+ GET /catalog/products 404 in 346ms (next.js: 71ms, application-code: 275ms)
+ GET / 200 in 518ms (next.js: 77ms, application-code: 441ms)
+ GET / 200 in 519ms (next.js: 125ms, application-code: 394ms)
+ GET /settings/integrations 404 in 358ms (next.js: 106ms, application-code: 252ms)
+ GET /catalog/products 404 in 231ms (next.js: 9ms, application-code: 222ms)
+ GET /settings/integrations 404 in 95ms (next.js: 11ms, application-code: 83ms)
