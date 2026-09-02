@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, TriangleAlert } from "lucide-react";
 import { Product, Size } from "@/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -123,7 +123,11 @@ export function ProductCard({ product, onSelect, index = 0 }: ProductCardProps) 
               : "bg-black hover:bg-gold hover:text-black"
           )}
         >
-          <ShoppingCart className="size-4" />
+          {isStockout ? (
+            <TriangleAlert className="size-4" />
+          ) : (
+            <ShoppingCart className="size-4" />
+          )}
           {isStockout ? "Stockout" : "Add to Cart"}
         </Button>
         <Button
