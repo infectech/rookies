@@ -70,10 +70,13 @@ const newArrivalNames: Record<number, string> = {
 const outOfStockMap: Record<string, import("@/types").Size[]> = {
   RR02: ["M", "L", "XXL", "XL"],
   RR04: ["M", "L", "XL", "XXL"],
-  RR05: ["L"],
+  RR05: ["M" , "L"],
   RR09: ["L"],
   RR11: ["M", "L", "XL", "XXL"],
+  RR14: ["L"],
   RR12: ["L", "XL", "XXL"],
+  RR19: ["L"],
+  RR20: ["L"]
 };
 
 const productsInCodeOrder: Product[] = productPhotoNumbers.reduce<Product[]>(
