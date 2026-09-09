@@ -74,7 +74,7 @@ const outOfStockMap: Record<string, import("@/types").Size[]> = {
   RR09: ["L"],
   RR11: ["M", "L", "XL", "XXL"],
   RR12: ["L", "XL", "XXL"],
-  RR14: ["L"],
+  RR14: ["M", "L", "XL"],
   RR15: ["L", "XL"],
   RR19: ["M", "L", "XL", "XXL"],
   RR20: ["L"]
