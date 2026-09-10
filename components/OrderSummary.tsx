@@ -122,6 +122,11 @@ export default function OrderSummary({ district }: OrderSummaryProps) {
       </div>
       <Separator className="my-4" />
       <div className="flex flex-col gap-1.5 text-sm">
+        {itemCount === 1 && (
+          <p className="mb-1 rounded-lg bg-[#E53935]/10 px-3 py-2 text-xs font-medium text-[#E53935]">
+            Select two shirts to get 50% discount and flat ৳50 delivery charge all over Bangladesh
+          </p>
+        )}
         <div className="flex justify-between">
           <span className="text-muted-foreground">Regular Price</span>
           <span className="line-through">{formatCurrency(ORIGINAL_PRICE * Math.max(1, itemCount))}</span>

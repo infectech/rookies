@@ -47,10 +47,10 @@ export function getDeliveryCharge(district: string, itemCount = 0): number {
 }
 
 export const SIZE_CHART = [
-  { size: "M", chest: 40, length: 28 },
-  { size: "L", chest: 42, length: 29 },
-  { size: "XL", chest: 44, length: 30 },
-  { size: "XXL", chest: 46, length: 31 },
+  { size: "M", chest: 40, length: 27 },
+  { size: "L", chest: 42, length: 28 },
+  { size: "XL", chest: 44, length: 29 },
+  { size: "XXL", chest: 46, length: 30 },
 ] as const;
 
 export const GOOGLE_SHEET_ENDPOINT =
