@@ -133,10 +133,16 @@ const newArrivalProducts: Product[] = newArrivalPhotoNumbers.reduce<Product[]>(
   []
 );
 
+const TOTAL_SIZES = 4;
+
+function availableSizeCount(product: Product): number {
+  return TOTAL_SIZES - (product.outOfStockSizes?.length ?? 0);
+}
+
 export const products: Product[] = [
   ...[...newArrivalProducts].reverse(),
   ...[...productsInCodeOrder].reverse(),
-];
+].sort((a, b) => availableSizeCount(b) - availableSizeCount(a));
 
 export function getProductByCode(code: string): Product | undefined {
   return products.find((p) => p.code === code);
