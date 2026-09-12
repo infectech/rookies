@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ShoppingBag } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import ProductModal from "@/components/ProductModal";
-import { products } from "@/data/products";
+import { useProducts } from "@/hooks/use-products";
 import { Product } from "@/types";
 import { useCart } from "@/hooks/use-cart";
 import { formatCurrency } from "@/lib/utils";
@@ -19,6 +19,7 @@ export default function Home() {
   const itemCount = useCart((s) => s.itemCount());
   const subtotal = useCart((s) => s.subtotal());
   const openCart = useCart((s) => s.openCart);
+  const products = useProducts();
 
   const handleSelect = (product: Product) => {
     setSelectedProduct(product);

@@ -61,25 +61,8 @@ const newArrivalNames: Record<number, string> = {
   22: "Crown Grid",
 };
 
-/**
- * Single source of truth for out-of-stock sizes, keyed by product code.
- * To stock out a product: add/edit its entry here with the sizes that are unavailable.
- * To fully stock out a product (all sizes): list all four sizes, e.g. ["M", "L", "XL", "XXL"].
- * To restock a product: remove its entry (or the specific sizes) from this map.
- */
-const outOfStockMap: Record<string, import("@/types").Size[]> = {
-  RR02: ["M", "L", "XL", "XXL"],
-  RR04: ["M", "L", "XL", "XXL"],
-  RR05: ["M" , "L", "XL", "XXL"],
-  RR09: ["L"],
-  RR11: ["M", "L", "XL", "XXL"],
-  RR12: ["L", "XL", "XXL"],
-  RR14: ["M", "L", "XL"],
-  RR15: ["M", "L", "XL", "XXL"],
-  RR18: ["L"],
-  RR19: ["M", "L", "XL", "XXL"],
-  RR20: ["L"]
-};
+// Out-of-stock sizes are no longer hardcoded here; they are read live
+// from the Stock sheet via useProducts() (see hooks/use-products.ts).
 
 const productsInCodeOrder: Product[] = productPhotoNumbers.reduce<Product[]>(
   (acc, photoNumber, index) => {
@@ -95,7 +78,7 @@ const productsInCodeOrder: Product[] = productPhotoNumbers.reduce<Product[]>(
         images: [
           `/products/rookies 05-08-26 RR ${String(photoNumber).padStart(2, "0")}.png`,
         ],
-        outOfStockSizes: outOfStockMap[code],
+        outOfStockSizes: undefined,
       });
     } else {
       const last = acc[acc.length - 1];
@@ -122,7 +105,7 @@ const newArrivalProducts: Product[] = newArrivalPhotoNumbers.reduce<Product[]>(
         images: [
           `/New Products/${String(photoNumber).padStart(2, "0")}.png`,
         ],
-        outOfStockSizes: outOfStockMap[code],
+        outOfStockSizes: undefined,
         isNewArrival: true,
       });
     } else {
