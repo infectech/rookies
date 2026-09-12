@@ -68,7 +68,7 @@ const newArrivalNames: Record<number, string> = {
  * To restock a product: remove its entry (or the specific sizes) from this map.
  */
 const outOfStockMap: Record<string, import("@/types").Size[]> = {
-  RR02: ["M", "L", "XXL", "XL"],
+  RR02: ["M", "L", "XL", "XXL"],
   RR04: ["M", "L", "XL", "XXL"],
   RR05: ["M" , "L", "XL", "XXL"],
   RR09: ["L"],
@@ -76,6 +76,7 @@ const outOfStockMap: Record<string, import("@/types").Size[]> = {
   RR12: ["L", "XL", "XXL"],
   RR14: ["M", "L", "XL"],
   RR15: ["M", "L", "XL", "XXL"],
+  RR18: ["L"],
   RR19: ["M", "L", "XL", "XXL"],
   RR20: ["L"]
 };
